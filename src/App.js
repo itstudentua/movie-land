@@ -44,7 +44,6 @@ export default function App() {
 
   return (
     <div className='wrapper'>
-      <div className="background-block"></div>
       <div className='content'>
         {
           burgerMenu && windowWidth < 700 &&
@@ -63,11 +62,11 @@ export default function App() {
         <SwitchTransition>
           <CSSTransition
             key={explore ? "main" : "hello"} // Меняем ключ, чтобы блоки правильно переключались
-            timeout={1500} // Длительность совпадает с CSS
+            timeout={500} // Длительность совпадает с CSS
             classNames="slide"
             unmountOnExit
           >
-            {explore ? <Main explore={explore} /> : <HelloPage setExplore={setExplore}/>}
+            {explore ? <Main explore={explore} /> : <HelloPage setExplore={setExplore} />}
           </CSSTransition>
         </SwitchTransition>
 

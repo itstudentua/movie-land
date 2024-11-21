@@ -28,10 +28,16 @@ code {
 }
 
 body {
-	margin: 0; 
+	margin: 0;
 	padding: 0;
 	color: #dbdbdb;
 	min-width: 300px;
+	background-color: #020b1c;
+	/* background-image: url(../public/Background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center; */
 }
 
 li {
@@ -48,7 +54,7 @@ button {
 
 .wrapper {
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 	min-height: 100vh;
 }
 
@@ -60,30 +66,12 @@ button {
 	flex: 1;
 }
 
-.background-block {
-	position: fixed; 
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 80%;
-	z-index: -1;
-	background-image: url(../public/Background.svg);
-	background-repeat: no-repeat; 
-	background-size: cover; 
-	background-attachment: fixed;
-	background-position: center; 
-}
-
 header {
 	position: sticky;
 	top: 0;
 	width: 100%;
 	padding: 20px;
-	background-image: url(../public/Background.svg);
-	background-repeat: no-repeat; 
-	background-size: cover; 
-	background-attachment: fixed; 
-	background-position: center;
+	background-color: #020b1c;
 	z-index: 2;
 	opacity: 0.9;
 }
@@ -160,8 +148,9 @@ header {
 	height: 25px;
 	background: transparent;
 	border: none;
+	position: relative;
 	cursor: pointer;
-	z-index: 10;
+	z-index: 22;
 }
 
 .bar {
@@ -196,23 +185,19 @@ header {
 	top: 0;
 	left: 0;
 	display: flex;
-	justify-content: center; 
-	align-items: center; 
-	background-image: url(../public/Background.svg);
-	background-repeat: no-repeat; 
-	background-size: cover; 
-	background-attachment: fixed; 
-	background-position: center;
+	justify-content: center;
+	align-items: center;
+	background-color: #020b1c;
 	opacity: 0.9;
-	z-index: 3;
+	z-index: 10;
 }
 
 .mobile {
 	display: flex;
 	flex-direction: column;
-	max-height: 90%;
+	max-height: 70%;
 	overflow-y: auto;
-	width: 100%; 
+	width: 100%;
 	font-size: 50px;
 }
 
@@ -310,27 +295,26 @@ main {
 .mainMovies-container {
 	margin-top: 150px;
 	width: 100%;
-	transition: transform 0.3s ease, opacity 0.3s ease; 
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .main_list-movies {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 100px;
 }
 
 .main_list-movies li {
 	width: 12.5%;
 	opacity: 0.5;
 	cursor: pointer;
-	transition: transform 0.3s ease, opacity 0.3s ease; 
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .main_list-movies li:hover {
 	opacity: 1;
 	position: relative;
-	transform: scale(1.2); 
+	transform: scale(1.2);
 	z-index: 1;
 }
 
@@ -357,7 +341,7 @@ footer {
 .slide-enter-active {
 	opacity: 1;
 	transform: translateY(0); /* Блок встаёт на своё место */
-	transition: 1500ms all; /* Плавный переход */
+	transition: 300ms all; /* Плавный переход */
 }
 
 .slide-exit {
@@ -369,5 +353,5 @@ footer {
 .slide-exit-active {
 	opacity: 0;
 	transform: translateY(-100%);
-	transition: 1500ms all; /* Плавный переход */
+	transition: 400ms all; /* Плавный переход */
 }

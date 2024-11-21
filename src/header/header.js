@@ -13,7 +13,7 @@ export default function Header({ windowWidth, burgerMenu, setHeaderBurgerMenu })
             <MenuList className="header__menu-list" />
           </>
         }
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px", position: "relative", zIndex: "10" }}>
           <button className='signIn_btn'>Sign in</button>
 
           {windowWidth < 700 && <button className={`burger-btn ${burgerMenu ? 'open' : ''}`} onClick={() => setHeaderBurgerMenu(menu => !menu)}>
