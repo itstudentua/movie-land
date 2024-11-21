@@ -44,6 +44,7 @@ export default function App() {
 
   return (
     <div className='wrapper'>
+      <div className="background-block"></div>
       <div className='content'>
         {
           burgerMenu && windowWidth < 700 &&

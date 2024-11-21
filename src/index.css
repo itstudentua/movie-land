@@ -28,15 +28,7 @@ code {
 }
 
 body {
-	background: linear-gradient(
-		to bottom,
-		#011830,
-		#041224,
-		#041224
-	); /* Темно-синий градиент */
-	background-attachment: fixed; /* Фиксируем фон, чтобы он не сдвигался */
-
-	margin: 0; /* Убирает отступы браузера */
+	margin: 0; 
 	padding: 0;
 	color: #dbdbdb;
 	min-width: 300px;
@@ -56,8 +48,8 @@ button {
 
 .wrapper {
 	display: flex;
-	flex-direction: column; /* Располагаем элементы по вертикали */
-	min-height: 100vh; /* Минимальная высота страницы — 100% от высоты экрана */
+	flex-direction: column; 
+	min-height: 100vh;
 }
 
 .content {
@@ -65,7 +57,21 @@ button {
 	min-height: 400px;
 	display: flex;
 	flex-direction: column;
-	flex: 1; /* Основной контент будет занимать все доступное пространство */
+	flex: 1;
+}
+
+.background-block {
+	position: fixed; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	z-index: -1;
+	background-image: url(../public/Background.svg);
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-attachment: fixed;
+	background-position: center; 
 }
 
 header {
@@ -73,7 +79,11 @@ header {
 	top: 0;
 	width: 100%;
 	padding: 20px;
-	background: #011830;
+	background-image: url(../public/Background.svg);
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-attachment: fixed; 
+	background-position: center;
 	z-index: 2;
 	opacity: 0.9;
 }
@@ -151,7 +161,7 @@ header {
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	z-index: 10; /* Для того чтобы кнопка была сверху */
+	z-index: 10;
 }
 
 .bar {
@@ -162,7 +172,6 @@ header {
 	transition: 0.5s ease;
 }
 
-/* Когда меню открыто, изменяем положение кнопок */
 .burger-btn.open .bar:nth-child(1) {
 	transform: rotate(45deg);
 	position: relative;
@@ -187,13 +196,13 @@ header {
 	top: 0;
 	left: 0;
 	display: flex;
-	justify-content: center; /* Центрируем по горизонтали */
-	align-items: center; /* Центрируем по вертикали */
+	justify-content: center; 
+	align-items: center; 
 	background-image: url(../public/Background.svg);
-	background-repeat: no-repeat; /* Отключает повторение фона */
-	background-size: cover; /* Масштабирует фон, чтобы он покрывал весь экран */
-	background-attachment: fixed; /* Закрепляет фон, чтобы он не прокручивался */
-	background-position: center; /* Центрирует фон */
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-attachment: fixed; 
+	background-position: center;
 	opacity: 0.9;
 	z-index: 3;
 }
@@ -201,9 +210,9 @@ header {
 .mobile {
 	display: flex;
 	flex-direction: column;
-	max-height: 90%; /* Ограничиваем высоту, чтобы была возможность прокрутки */
-	overflow-y: auto; /* Включаем вертикальную прокрутку */
-	width: 100%; /* Можно установить свою ширину, если нужно */
+	max-height: 90%;
+	overflow-y: auto;
+	width: 100%; 
 	font-size: 50px;
 }
 
@@ -301,27 +310,27 @@ main {
 .mainMovies-container {
 	margin-top: 150px;
 	width: 100%;
-	transition: transform 0.3s ease, opacity 0.3s ease; /* Плавная анимация */
+	transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
 .main_list-movies {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 50px;
+	gap: 100px;
 }
 
 .main_list-movies li {
 	width: 12.5%;
 	opacity: 0.5;
 	cursor: pointer;
-	transition: transform 0.3s ease, opacity 0.3s ease; /* Плавная анимация */
+	transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
 .main_list-movies li:hover {
 	opacity: 1;
 	position: relative;
-	transform: scale(1.2); /* Увеличиваем элемент */
+	transform: scale(1.2); 
 	z-index: 1;
 }
 
